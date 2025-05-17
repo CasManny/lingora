@@ -4,7 +4,8 @@ import React from "react";
 export const Rewards = () => {
   return (
     <section className="py-20 px-5 sm:px-10 w-full">
-      <div className="max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 sm:gap-5 lg:gap-10 items-center">
+      <div className="max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-center">
+
         <div className="space-y-4">
           <h1 className="text-4xl sm:text-5xl font-bold">
             Unlock Your Language Potential with Our Innovative Learning Platform

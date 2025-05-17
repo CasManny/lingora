@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const HeroSection = () => {
   return (
-    <div className="flex items-center justify-center px-5 sm:px-0 pt-15 sm:pt-40 pb-20 md:pb-60 bg-gradient-to-b from-[#fef6ff] via-[#fff0f5] to-white">
+    <div className="flex items-center justify-center px-5 sm:px-0 pt-28 sm:pt-40 pb-20 md:pb-60 bg-gradient-to-b from-[#fef6ff] via-[#fff0f5] to-white">
       <div className="max-w-2xl text-left sm:text-center flex items-center justify-start sm:justify-center flex-col space-y-4">
         <h1 className="text-3xl sm:text-5xl font-bold text-gray-900 relative">
           Unlock{" "}
