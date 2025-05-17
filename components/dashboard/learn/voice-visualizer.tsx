@@ -95,7 +95,7 @@ export const VoiceVisualizer = () => {
   };
 
   return (
-    <div className=" p-4 rounded-xl flex items-center gap-4 w-full max-w-md">
+    <div className=" p-4 rounded-xl flex items-center lg:flex-row flex-col gap-4 w-full max-w-md">
       <Button
         size={"icon"}
         onClick={listening ? stopListening : startListening}
@@ -105,7 +105,7 @@ export const VoiceVisualizer = () => {
       </Button>
       <canvas
         ref={canvasRef}
-        width={300}
+        width={200}
         height={40}
         className="rounded-md bg-gray-100"
       />

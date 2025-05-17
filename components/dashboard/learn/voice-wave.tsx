@@ -1,7 +1,7 @@
 "use client"
 import { motion } from "motion/react";
 
-const barCount = 100;
+const barCount = 50;
 
 export const VoiceWave = () => {
   return (

@@ -31,7 +31,7 @@ export function LanguageApp() {
   }, [setIsOpen]);
 
   return (
-    <div className="h-[calc(100vh-60px)] p-6 bg-gray-100">
+    <div className="py-10 bg-gray-100">
       <div className="max-w-2xl mx-auto space-y-6 mt-20">
         <h1 className="text-3xl font-bold text-center">
           Language Audio Learning
@@ -92,25 +92,25 @@ export function LanguageApp() {
           <div className="space-y-4">
             {[1, 2, 3].map((i) => (
               <Card key={i}>
-                <CardContent className="p-4 flex justify-between items-center">
-                  <div>
+                <CardContent className="p-4 flex flex-col gap-2">
+                  <div className="flex justify-between items-center">
                     <p className="font-semibold">Sentence {i}</p>
-                    {playingIndex === i ? (
-                      <VoiceWave />
-                    ) : (
-                      <p className="text-sm text-gray-600 italic">
-                        This is a sample sentence in {selectedLanguage}
-                      </p>
-                    )}
+                    <Button
+                      variant="ghost"
+                      onClick={() =>
+                        setPlayingIndex((prev) => (prev === i ? null : i))
+                      }
+                    >
+                      <Volume2 className="w-5 h-5" />
+                    </Button>
                   </div>
-                  <Button
-                    variant="ghost"
-                    onClick={() =>
-                      setPlayingIndex((prev) => (prev === i ? null : i))
-                    }
-                  >
-                    <Volume2 className="w-5 h-5" />
-                  </Button>
+                  {playingIndex === i ? (
+                    <VoiceWave />
+                  ) : (
+                    <p className="text-sm text-gray-600 italic">
+                      This is a sample sentence in {selectedLanguage}
+                    </p>
+                  )}
                 </CardContent>
               </Card>
             ))}
