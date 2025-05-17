@@ -26,21 +26,26 @@ const data = [
 
 export const HowItWorks = () => {
   return (
-    <section className="py-40 px-5 sm:px-10">
+    <section className="py-40 px-5 sm:px-10 bg-gradient-to-b from-white via-[#fef6ff] to-[#ffffff]">
       <SectionHeader
         subHeading="Learn"
-        title="Unlock Your language Learning potential Today"
-        desc="Experience a revolutionary way to learn language through audio. Our platform connect you with native speakers for authentic learning."
+        title="Unlock Your Language Learning Potential Today"
+        desc="Experience a revolutionary way to learn languages through authentic conversation. Lingora connects you with native speakers from around the globe."
       />
-      <div className="max-w-7xl mt-10 w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="max-w-7xl mt-14 w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         {data.map(({ Icon, title, desc }, index) => (
-          <div className="flex gap-2 mx-auto max-w-md" key={index}>
-            <div className="relative size-20">
-              <Icon className="size-10" />
+          <div
+            className="flex items-start gap-6 p-6 rounded-xl bg-white shadow-md hover:shadow-lg transition duration-300 border border-gray-100"
+            key={index}
+          >
+            <div className="flex items-center justify-center text-[#DD5E98]">
+              <Icon className="size-8" />
             </div>
-            <div className="">
-              <h2 className="font-semibold text-2xl">{title}</h2>
-              <span className="text-lg">{desc}</span>
+            <div>
+              <h2 className="font-semibold text-xl text-gray-900 mb-1">
+                {title}
+              </h2>
+              <p className="text-gray-600 text-sm leading-relaxed">{desc}</p>
             </div>
           </div>
         ))}

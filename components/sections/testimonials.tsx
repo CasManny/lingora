@@ -7,43 +7,43 @@ const reviews = [
     name: "Amara K.",
     username: "@amara_fr",
     body: "I’ve tried tons of language apps, but nothing beats hearing real people speak. This platform makes learning feel human, not robotic.",
-    img: "https://avatar.vercel.sh/amara",
+    img: "/man-1.svg",
   },
   {
     name: "Luis M.",
     username: "@luis_mx",
     body: "Recording in my native language and knowing it helps others? So fulfilling. This isn’t just an app — it’s a cultural bridge.",
-    img: "https://avatar.vercel.sh/luis",
+    img: "/man-1.svg",
   },
   {
     name: "Elena F.",
     username: "@elena_it",
     body: "The design is clean and intuitive. I can practice Swahili and help others with Italian — all in one place!",
-    img: "https://avatar.vercel.sh/elena",
+    img: "/man-1.svg",
   },
   {
     name: "Samuel O.",
     username: "@samuel_ng",
     body: "I use this daily. Hearing native speakers has helped my pronunciation and boosted my confidence big time.",
-    img: "https://avatar.vercel.sh/samuel",
+    img: "/man-1.svg",
   },
   {
     name: "Aya N.",
     username: "@aya_jp",
     body: "This isn’t just about learning words — it’s about stories, voices, and accents from around the world. Beautiful.",
-    img: "https://avatar.vercel.sh/aya",
+    img: "/man-1.svg",
   },
   {
     name: "John B.",
     username: "@john_teach",
     body: "As a language teacher, this is gold. It gives students real, natural examples textbooks can't offer.",
-    img: "https://avatar.vercel.sh/johnb",
+    img: "/man-1.svg",
   },
   {
     name: "John B.",
     username: "@john_teach",
     body: "As a language teacher, this is gold. It gives students real, natural examples textbooks can't offer.",
-    img: "https://avatar.vercel.sh/johnb",
+    img: "/man-1.svg",
   },
 ];
 
@@ -84,7 +84,7 @@ const ReviewCard = ({
 
 export function Testimonials() {
   return (
-    <div className="px-5 sm:px-10 space-y-10">
+    <div className="px-5 sm:px-10 space-y-10 py-20">
       <SectionHeader
         title="What People are saying"
         desc="It's never been this fun to learn languages. Millions of happy Lingora members agree!"

@@ -15,10 +15,12 @@ export const WelcomeBanner = ({ username, completed, status }: WelcomeBannerProp
         </h1>
         <p>
           Your students completed{" "}
-          <span className="font-semibold">{completed}%</span> of the tasks
+          <span className="font-bold text-[#FF928B]">{completed}%</span> of the
+          tasks
         </p>
         <p>
-          Progress is <span className="font-semibold">{status}!</span>{" "}
+          Progress is{" "}
+          <span className="font-bold text-[#e40dcb]">{status}!</span>{" "}
         </p>
       </CardContent>
     </Card>
