@@ -1,23 +1,30 @@
 "use client"
-import { Mic } from "lucide-react";
 import { motion } from "motion/react";
 
-const barHeights = [10, 16, 8, 20, 14, 22, 12, 18, 8, 16, 10, 20];
+const barCount = 100;
 
 export const VoiceWave = () => {
   return (
-    <div className="bg-black rounded-xl px-4 py-3 flex items-center gap-4 w-fit shadow-lg">
-      <div className="bg-blue-600 p-2 rounded-full">
-        <Mic className="text-white w-4 h-4" />
-      </div>
-      <div className="flex gap-1 items-end h-6">
-        {barHeights.map((h, i) => (
+    <div className="rounded-xl px-4 py-3 flex items-center gap-4 w-fit shadow-lg">
+      <div className="flex gap-[2px] items-end h-6">
+        {Array.from({ length: barCount }).map((_, i) => (
           <motion.div
             key={i}
             className="w-[2px] bg-gradient-to-t from-purple-600 to-purple-300 rounded-full"
-            initial={{ height: h }}
-            animate={{ height: [h, h + 10, h] }}
-            transition={{ repeat: Infinity, duration: 1 + (i % 5) * 0.1 }}
+            animate={{
+              height: [
+                `${Math.random() * 8 + 8}px`,
+                `${Math.random() * 20 + 10}px`,
+                `${Math.random() * 8 + 8}px`,
+              ],
+            }}
+            transition={{
+              repeat: Infinity,
+              duration: 0.8 + Math.random() * 0.6,
+              repeatType: "loop",
+              ease: "easeInOut",
+              delay: Math.random() * 0.4,
+            }}
           />
         ))}
       </div>

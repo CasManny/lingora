@@ -60,7 +60,6 @@ const getProgressClass = (value: number) => {
   return "h-2 flex-1 [&>div]:!bg-red-500";
 };
 
-
 const ReviewCard = ({
   userImage,
   userName,
@@ -69,20 +68,27 @@ const ReviewCard = ({
   const progressClass = getProgressClass(progressValue);
 
   return (
-    <div className="flex gap-2 items-center">
-      <Image
-        src={userImage}
-        alt={userName}
-        width={40}
-        height={40}
-        className="object-cover rounded-full size-10"
-      />
-      <div className="flex-1 flex gap-4 items-center">
-        <h1 className="whitespace-nowrap w-28 truncate">{userName}</h1>
-        <Progress value={progressValue} className={progressClass} />
-        <p className="font-semibold w-8 text-right">{progressValue}%</p>
+    <div className="flex flex-col sm:flex-row sm:justify-baseline gap-2 w-full">
+      <div className="flex items-center gap-2 w-full sm:w-auto">
+        <Image
+          src={userImage}
+          alt={userName}
+          width={40}
+          height={40}
+          className="object-cover rounded-full size-10"
+        />
+      </div>
+      <div className="flex flex-col w-full">
+        <h1 className="font-medium">{userName}</h1>
+        <div className="">
+          <div className="flex-1">
+            <Progress value={progressValue} className={progressClass} />
+          </div>
+          <p className="font-semibold text-sm sm:text-base min-w-[40px] text-right">
+            {progressValue}%
+          </p>
+        </div>
       </div>
     </div>
   );
 };
-

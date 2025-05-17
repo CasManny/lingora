@@ -7,7 +7,7 @@ export function CourseCalendar() {
   const [dates, setDates] = React.useState<Date[] | undefined>([]);
 
   return (
-    <div className="w-full flex items-center justify-center">
+    <div className="w-full hidden items-center justify-center lg:flex">
       <Calendar
         mode="multiple"
         selected={dates}

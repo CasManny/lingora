@@ -106,7 +106,7 @@ export const LanguageChatUI = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row h-screen bg-gray-100">
+    <div className="flex flex-col md:flex-row h-[calc(100vh-60px)] bg-gray-100">
       {/* Sidebar */}
       <div className="w-full md:w-64 bg-white border-r p-4 space-y-4 overflow-y-auto md:h-full max-h-48 md:max-h-full">
         <h2 className="text-lg font-semibold mb-2">Language Coaches</h2>

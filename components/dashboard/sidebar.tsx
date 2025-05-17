@@ -56,7 +56,7 @@ export const DashboardSidebar = () => {
       <SidebarHeader className="bg-brand-dark-blue p-5 ">
         <div className="flex justify-between items-center">
           <Logo />
-          <SidebarTrigger className="text-white sm:hidden" />
+          <SidebarTrigger className="sm:hidden" />
         </div>
       </SidebarHeader>
       <SidebarContent className="bg-brand-dark-blue px-3 pt-5 space-y-3 scrollbar-none">
